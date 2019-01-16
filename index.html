@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <header>
+        <form action="/" method="GET">
+            <!-- Row 1 -->
+            <div class="search-row">
+                <input id="search" name="search" type="search" placeholder="Champs Elysées, Paris">
+                <input id="submit" class="submit-normal" type="submit" value="Search">
+            </div>
+            <!-- Row 2 -->
+            <div class="search-row">
+                <label id="checkin">
+                    Check-in
+                    <input name="checkin" type="date">
+                </label>
+                <label id="checkout">
+                    Check-out
+                    <input name="checkout" type="date" min="2018-12-01">
+                </label>
+                <select id="room" name="room">
+                    <option value="">All</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="family">Family</option>
+                </select>
+            </div>
+            <!-- Row 3 -->
+            <div id="row3" class="search-row">
+                <div id="maxprice">
+                    <label for="maxprice-input">
+                        <span>Price</span>
+                        <span id="actual-maxprice">max $6090</span>
+                    </label>
+                    <input id="maxprice-input" name="maxprice" type="range" value="6090" min="50" max="6090">
+                </div>
+                <label id="property">
+                    Property type
+                    <select name="property">
+                        <option value="">All</option>
+                        <option value="1">1 star</option>
+                        <option value="2">2 star</option>
+                        <option value="3">3 star</option>
+                        <option value="4">4 star</option>
+                        <option value="5">5 star</option>
+                    </select>
+                </label>
+                <label id="rating">
+                    Guest rating
+                    <select name="rating">
+                        <option value="">All</option>
+                        <option value="2">Okay</option>
+                        <option value="6">Fair</option>
+                        <option value="7">Good</option>
+                        <option value="8.5">Very Good</option>
+                        <option value="10">Excellent</option>
+                    </select>
+                </label>
+                <label id="location">
+                    Hotel location
+                    <select id="location-select" name="location">
+                        <option value="">All</option>
+                        <option value="loc1">location 1</option>
+                        <option value="loc2">location 2</option>
+                        <option value="loc3">location 3</option>
+                        <option value="loc4">location 4</option>
+                        <option value="loc5">location 5</option>
+                    </select>
+                </label>
+                <label id="filters">
+                    More filters
+                    <select name="filters">
+                        <option value="">All</option>
+                        <option value="filt1">Filter 1</option>
+                        <option value="filt2">Filter 2</option>
+                        <option value="filt3">Filter 3</option>
+                        <option value="filt4">Filter 4</option>
+                        <option value="filt5">Filter 5</option>
+                    </select>
+                </label>
+            </div>
+        </form>
+    </header>
+    <main>
+        <section id="section1">
+            <p>View Map</p>
+            <label>
+                Sort by
+                <select name="sort">
+                    <option value="recommended">Our recommendations</option>
+                    <option value="rating-recomended">Rating and Recommended</option>
+                    <option value="price-recomended">Price and Recommended</option>
+                    <option value="distance-recomended">Distance and Recommended</option>
+                    <option value="rating-only">Rating only</option>
+                    <option value="distance-only">Distance only</option>
+                    <option value="price-only">Price only</option>
+                </select>
+            </label>
+        </section>
+        <section class="hotel-container">
+            <div class="hotel">
+                <div class="hotel-photo">
+                    <img class="main-image" src="Media/Hotel Lancaster.jpg" alt="Photo of hotel Lancaster">
+                    <img class="favorite" src="Media/heart-icon-gray.png" alt="Add to favorites">
+                </div>
+                <div class="hotel-info">
+                    <p class="hotel-name">Hotel Lancaster</p>
+                    <p class="hotel-stars">Hotel</p>
+                    <p class="hotel-address">Paris, 0.2 miles to Champs Elysees</p>
+                    <p class="hotel-reviews"><span>8.8</span> <strong>Excellent</strong> (1736 reviews)</p>
+                    <p class="hotel-location">Excellent location (9.2/10)</p>
+                </div>
+                <div class="hotel-prices">
+                    <div class="various-offers">
+                        <p>Hotel website </p>
+                        <p class="price">$706</p>
+                    </div>
+                    <div class="various-offers">
+                        <p>Agoda </p>
+                        <p class="price">$575</p>
+                    </div>
+                    <div class="various-offers">
+                        <p>Travelocity </p>
+                        <p class="price">$708</p>
+                    </div>
+                    <div class="more-deals">
+                        <p>More deals from </p>
+                        <p>$575</p>
+                    </div>
+                </div>
+                <div class="hotel-deal">
+                    <div class="view-offer">
+                        <p>Hotel website </p>
+                        <p class="price">$706</p>
+                    </div>
+                    <p class="calculated-offer"><span class="nights">3</span><span> nights for </span><span class="price calculated-price">$2,119</span></p>
+                    <p class="view-deal">View Deal</p>
+                </div>
+            </div>
+        </section>
+        <section class="hotel-container">
+            <div class="hotel">
+                <div class="hotel-photo">
+                    <img class="main-image" src="Media/Prince de Galles.jpeg" alt="Photo of hotel Prince de Galles">
+                    <img class="favorite" src="Media/heart-icon-gray.png" alt="Add to favorites">
+                </div>
+                <div class="hotel-info">
+                    <p class="hotel-name">Prince de Galles</p>
+                    <p class="hotel-stars">Hotel</p>
+                    <p class="hotel-address">Paris, 0.3 miles to Champs Elysees</p>
+                    <p class="hotel-reviews"><span>9.0</span> <strong>Excellent</strong> (473 reviews)</p>
+                    <p class="hotel-location">Excellent location (9.4/10)</p>
+                </div>
+                <div class="hotel-prices">
+                    <div class="various-offers">
+                        <p>Orbez </p>
+                        <p class="price">$1,213</p>
+                    </div>
+                    <div class="various-offers">
+                        <p>Trip.com </p>
+                        <p class="price">$1,249</p>
+                    </div>
+                    <div class="various-offers">
+                        <p>Expedia </p>
+                        <p class="price">$1,213</p>
+                    </div>
+                    <div class="more-deals">
+                        <p>More deals from </p>
+                        <p>$1,213</p>
+                    </div>
+                </div>
+                <div class="hotel-deal">
+                    <div class="discount">
+                        <p>HotelPower.com</p>
+                        <p class="price">$1,568</p>
+                    </div>
+                    <div class="view-offer">
+                        <p>Travelocity </p>
+                        <p class="price">$1,213</p>
+                    </div>
+                    <p class="calculated-offer"><span class="nights">3</span><span> nights for </span> <span class="price calculated-price">$3,638</span></p>
+                    <p class="extra-offer">Free breakfast</p>
+                    <p class="view-deal">View Deal</p>
+                </div>
+            </div>
+        </section>
+        <section class="hotel-container">
+                <div class="hotel">
+                    <div class="hotel-photo">
+                        <img class="main-image" src="Media/Marignan.jpeg" alt="Photo of hotel Lancaster">
+                        <img class="favorite" src="Media/heart-icon-gray.png" alt="Add to favorites">
+                    </div>
+                    <div class="hotel-info">
+                        <p class="hotel-name">Marignan Champs Elysées</p>
+                        <p class="hotel-stars">Hotel</p>
+                        <p class="hotel-address">Paris, 0.1 miles to Champs Elysees</p>
+                        <p class="hotel-reviews"><span>8.1</span> <strong>Very good</strong> (1057 reviews)</p>
+                        <p class="hotel-location">Excellent location (9.2/10)</p>
+                    </div>
+                    <div class="hotel-prices">
+                        <div class="various-offers">
+                            <p>Hotel website </p>
+                            <p class="price">$398</p>
+                        </div>
+                        <div class="various-offers">
+                            <p>GetaRoom</p>
+                            <p class="price">$394</p>
+                        </div>
+                        <div class="various-offers">
+                            <p>Booking.com</p>
+                            <p class="price">$398</p>
+                        </div>
+                        <div class="more-deals">
+                            <p>More deals from </p>
+                            <p>$357</p>
+                        </div>
+                    </div>
+                    <div class="hotel-deal">
+                        <div class="view-offer">
+                            <p>Expedia</p>
+                            <p class="price">$393</p>
+                        </div>
+                        <p class="calculated-offer"><span class="nights">3</span><span> nights for </span><span class="price calculated-price">$1,179</span></p>
+                        <p class="view-deal">View Deal</p>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
